@@ -1,1 +1,1 @@
-git config --global merge.line-set.driver 'line-set-merge %O %A %B > %A'
+git config --global merge.line-sets.driver 'git-merge-line-sets %O %A %B > %A'
