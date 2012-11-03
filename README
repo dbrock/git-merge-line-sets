@@ -1,0 +1,1 @@
+git config --global merge.line-set.driver 'line-set-merge %O %A %B > %A'
