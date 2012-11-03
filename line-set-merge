@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'set'
+
+def read_line_set(filename)
+  Set.new File.read(filename).lines
+end
+
+def write_line_set(filename, set)
+  File.write(filename, set.to_a.sort.join)
+end
+
+s0 = read_line_set ARGV[0]
+s1 = read_line_set ARGV[1]
+s2 = read_line_set ARGV[2]
+
+write_line_set ARGV[1], s1 + s2 - (s0 - s1) - (s0 - s2)
